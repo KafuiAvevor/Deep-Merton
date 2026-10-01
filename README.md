@@ -23,7 +23,7 @@ $$H(t,x) = \mathbb{E}\\left[\\frac{x^{1-\\gamma}}{1-\\gamma}\bigm| \mathcal{F}_t
 
 Applying Ito's Lemma and substituting the control identity $\\pi = \\frac{Z}{\\sigma (1-\\gamma)Y}$, the process $Y_t$ evolves according to the process:
 
-$$ dY_t = \left[\underbrace{\partial_t H + rx\partial_x H +(\mu - r)\pi_t x\partial_x H +\frac{1}{2} \sigma^2 \pi^2 x^2 \partial_{xx} H}_\mathcal{D}\right] dt + \underbrace{\sigma \pi x \partial x H}_{Z_t} dW_t, \quad  Y_T = \frac{x^{1-\gamma}}{1-\gamma} $$
+$$ dY_t = \left[\underbrace{\partial_t H + rx\partial_x H +(\mu - r)\pi_t x\partial_x H +\frac{1}{2} \sigma^2 \pi^2 x^2 \partial_{xx} H}_\mathcal{D}\right] dt + \underbrace{\sigma \pi x \partial_x H}_{Z_t} dW_t, \quad  Y_T = \frac{x^{1-\gamma}}{1-\gamma} $$
 
 or , in terms of Z:
 
