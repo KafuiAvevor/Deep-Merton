@@ -25,7 +25,7 @@ Applying Ito's Lemma, the process $Y_t$ evolves according to the process:
 
 $$ dY_t = \left[\underbrace{\partial_t H + rx\partial_x H +(\mu - r)\pi_t x\partial_x H +\frac{1}{2} \sigma^2 \pi^2 x^2 \partial_{xx} H}_{\mathcal{D}^{\pi}}\right] dt + \underbrace{\sigma \pi x \partial_x H}_{Z_t} dW_t, \quad  Y_T = \frac{X_T^{1-\gamma}}{1-\gamma} $$
 
-or , in terms of Z:
+or, in terms of Z:
 
 $$ dY_t =  \left[\underbrace{\\partial_tY_t + r(1-\\gamma)Y_t + \\frac{\\mu -r}{\\sigma}Z_t - \\frac{\\gamma}{2(1-\\gamma)}\\frac{Z_t^2}{Y_t}}_{\mathcal{D}^{Z}}\right] dt +Z_t dW_t, , \quad  Y_T = \frac{X_T^{1-\gamma}}{1-\gamma}$$
 
