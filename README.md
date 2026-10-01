@@ -1,6 +1,6 @@
 Deep Solver for Merton's Optimal Control
 
-This repository implements a custom hybrid deep learning solver for Merton's Portfolio Optimization problem. By bridging **Forward-Backward Stochastic Differential Equations (FBSDEs)** with **Physics-Informed Neural Networks (PINNs)**, this method overcomes the variance explosion typical of standard Deep BSDE solvers in highly non-linear control problems.
+This repository implements a custom hybrid deep learning solver for Merton's Portfolio Optimization problem, bridging **Forward-Backward Stochastic Differential Equations (FBSDEs)** with **Physics-Informed Neural Networks (PINNs)**.
 
 Unlike standard approaches that rely purely on terminal loss, this solver enforces the Hamilton-Jacobi-Bellman (HJB) algebraic constraints and the Martingale Optimality conditions locally along forward-simulated stochastic trajectories.
 
