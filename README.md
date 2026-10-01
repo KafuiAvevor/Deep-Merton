@@ -23,14 +23,14 @@ $$H(t,X_t) = \sup_\pi\mathbb{E}\\left[\\frac{X_T^{1-\\gamma}}{1-\\gamma}\bigm| \
 
 Applying Ito's Lemma and substituting the control identity $\\pi = \\frac{Z}{\\sigma (1-\\gamma)Y}$, the process $Y_t$ evolves according to the process:
 
-$$ dY_t = \left[\underbrace{\partial_t H + rx\partial_x H +(\mu - r)\pi_t x\partial_x H +\frac{1}{2} \sigma^2 \pi^2 x^2 \partial_{xx} H}_\mathcal{D}\right] dt + \underbrace{\sigma \pi x \partial_x H}_{Z_t} dW_t, \quad  Y_T = \frac{x^{1-\gamma}}{1-\gamma} $$
+$$ dY_t = \left[\underbrace{\partial_t H + rx\partial_x H +(\mu - r)\pi_t x\partial_x H +\frac{1}{2} \sigma^2 \pi^2 x^2 \partial_{xx} H}_{\mathcal{D}^{\pi}}\right] dt + \underbrace{\sigma \pi x \partial_x H}_{Z_t} dW_t, \quad  Y_T = \frac{X_T^{1-\gamma}}{1-\gamma} $$
 
 or , in terms of Z:
 
-$$ dY_t =  \left[\underbrace{\\partial_tY_t + r(1-\\gamma)Y_t + \\frac{\\mu -r}{\\sigma}Z_t - \\frac{\\gamma}{2(1-\\gamma)}\\frac{Z_t^2}{Y_t}}_\mathcal{D}\right] dt +Z_t dW_t, , \quad  Y_T = \frac{x^{1-\gamma}}{1-\gamma}$$
+$$ dY_t =  \left[\underbrace{\\partial_tY_t + r(1-\\gamma)Y_t + \\frac{\\mu -r}{\\sigma}Z_t - \\frac{\\gamma}{2(1-\\gamma)}\\frac{Z_t^2}{Y_t}}_{\mathcal{D}^{Z}}\right] dt +Z_t dW_t, , \quad  Y_T = \frac{X_T^{1-\gamma}}{1-\gamma}$$
 
-The Martingale Optimality Principle states that under the optimal control policy $\\pi^*$:
-1. The drift of the value process must be zero: $\\mathcal{D}(\\pi^*) = 0$
+The Martingale Optimality Principle states that under the optimal control policy $Z^*$:
+1. The drift of the value process must be zero: $\\mathcal{D}(Z^*) = 0 $ 
 2. The supremum is attained at the stationary point: $\\partial_Z\\mathcal{D} = 0$
 
 ## Deep Learning Methodology
