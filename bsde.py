@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
+import numpy as np
 
 T = 1.0
 N = 50
@@ -9,7 +10,7 @@ sqrt_dt = dt**0.5
 mu = 0.08
 r = 0.02
 sigma = 0.2
-gamma = 2.0
+gamma = 5
 x0 = 1.0
 alpha = 0.02
 
@@ -156,14 +157,4 @@ for epoch in range(n_epochs):
 pi_opt = pi_epoch
 Y0_opt = Y0_epoch
 dtY_opt = dtY_curr
-print(f"Theoretical values:")
-print(f"π* = {pi_known:.6f}")
-print(f"Y0* = {true_Y0:.6f}")
-print(f"z* = {z_star:.6f}")
-print(f"dtY* = {-a*true_Y0:.6f}")
 
-print(f"Learned values:")
-print(f"π = {pi_opt:.6f}")
-print(f"Y0 = {Y0_opt:.6f}")
-print(f"z = {Z_curr:.6f}")
-print(f"dtY = {dtY_opt:.6f}")
