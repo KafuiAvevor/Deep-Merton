@@ -21,7 +21,7 @@ Let $Y_t$ be the dynamic value function $H(t,x)$.
 
 $$H(t,X_t) = \sup_\pi\mathbb{E}\\left[\\frac{X_T^{1-\\gamma}}{1-\\gamma}\bigm| \mathcal{F}_t\\right]$$
 
-Applying Ito's Lemma and substituting the control identity $\\pi = \\frac{Z}{\\sigma (1-\\gamma)Y}$, the process $Y_t$ evolves according to the process:
+Applying Ito's Lemma, the process $Y_t$ evolves according to the process:
 
 $$ dY_t = \left[\underbrace{\partial_t H + rx\partial_x H +(\mu - r)\pi_t x\partial_x H +\frac{1}{2} \sigma^2 \pi^2 x^2 \partial_{xx} H}_{\mathcal{D}^{\pi}}\right] dt + \underbrace{\sigma \pi x \partial_x H}_{Z_t} dW_t, \quad  Y_T = \frac{X_T^{1-\gamma}}{1-\gamma} $$
 
