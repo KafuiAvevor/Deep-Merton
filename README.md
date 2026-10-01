@@ -8,7 +8,7 @@ Unlike standard approaches that rely purely on terminal loss, this solver enforc
 
 Consider an agent allocating wealth $X_t$ between a risky asset and a risk-free asset to maximize expected CRRA utility:
 
-$$J(x) = \mathbb{E}\\left[\\frac{x^{1-\\gamma}}{1-\\gamma}\\right]$$
+$$J(X_0) = \mathbb{E}\\left[\\frac{X_T^{1-\\gamma}}{1-\\gamma}\\right]$$
 
 The portfolio wealth evolves according to the stochastic differential equation:
 
@@ -19,7 +19,7 @@ where $\\pi_t$ is the proportion of wealth invested in the risky asset.
 ### The FBSDE Formulation
 Let $Y_t$ be the dynamic value function $H(t,x)$.
 
-$$H(t,x) = \mathbb{E}\\left[\\frac{x^{1-\\gamma}}{1-\\gamma}\bigm| \mathcal{F}_t\\right]$$
+$$H(t,X_t) = \sup_\pi\mathbb{E}\\left[\\frac{X_T^{1-\\gamma}}{1-\\gamma}\bigm| \mathcal{F}_t\\right]$$
 
 Applying Ito's Lemma and substituting the control identity $\\pi = \\frac{Z}{\\sigma (1-\\gamma)Y}$, the process $Y_t$ evolves according to the process:
 
@@ -48,7 +48,7 @@ The total loss is a dynamically weighted sum of three components:
 
    $$\\mathcal{L}_{terminal} = \\mathbb{E}\\left[\\left(Y_T - \\frac{X_T^{1-\\gamma}}{1-\\gamma}\\right)^2\\right]$$
 
-3.  **PDE Loss (Feynman-Kac / HJB Residual):** Enforces the condition that the drift $\\mathcal{D}$ must be zero under optimal control. We compute exact spatial and temporal derivatives using PyTorch's `autograd`.
+3.  **PDE Loss (HJB Residual):** Enforces the condition that the drift $\\mathcal{D}$ must be zero under optimal control. We compute exact spatial and temporal derivatives using PyTorch's `autograd`.
 
    $$\\mathcal{L}_{PDE} = \\mathbb{E}[\\mathcal{D}^2]$$
 
